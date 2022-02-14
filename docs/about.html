@@ -481,16 +481,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomvanbuggenumTutorialworkflowRtree0e94c2d178d4470e1bc6f569a9a57393374d0e81targetblank0e94c2da"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/vanbuggenum/Tutorial_workflowR/tree/0e94c2d178d4470e1bc6f569a9a57393374d0e81" target="_blank">0e94c2d</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomvanbuggenumTutorialworkflowRtree406de78f363b53e3c3bfb71b867f4e5a9d9ed443targetblank406de78a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/vanbuggenum/Tutorial_workflowR/tree/406de78f363b53e3c3bfb71b867f4e5a9d9ed443" target="_blank">406de78</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomvanbuggenumTutorialworkflowRtree0e94c2d178d4470e1bc6f569a9a57393374d0e81targetblank0e94c2da" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomvanbuggenumTutorialworkflowRtree406de78f363b53e3c3bfb71b867f4e5a9d9ed443targetblank406de78a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/vanbuggenum/Tutorial_workflowR/tree/0e94c2d178d4470e1bc6f569a9a57393374d0e81" target="_blank">0e94c2d</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/vanbuggenum/Tutorial_workflowR/tree/406de78f363b53e3c3bfb71b867f4e5a9d9ed443" target="_blank">406de78</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -537,6 +537,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/vanbuggenum/Tutorial_workflowR/blob/406de78f363b53e3c3bfb71b867f4e5a9d9ed443/analysis/about.Rmd" target="_blank">406de78</a>
+</td>
+<td>
+vanbuggenum
+</td>
+<td>
+2022-02-14
+</td>
+<td>
+plot for paper manual save in output
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/vanbuggenum/Tutorial_workflowR/fe1efb13b012b66b56e76aac532ac18392c92f9c/docs/about.html" target="_blank">fe1efb1</a>
+</td>
+<td>
+vanbuggenum
+</td>
+<td>
+2022-02-14
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -653,6 +687,13 @@ Start workflowr project.
 <p>Add a new chunk by clicking the <em>Insert Chunk</em> button on the toolbar or by pressing <em>Ctrl+Alt+I</em>.</p>
 <p>When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the <em>Preview</em> button or press <em>Ctrl+Shift+K</em> to preview the HTML file).</p>
 <p>The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike <em>Knit</em>, <em>Preview</em> does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code></pre></div>
+<pre><code>Warning: package &#39;ggplot2&#39; was built under R version 4.0.5</code></pre>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(mtcars)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="at">x =</span> mpg, <span class="at">y =</span> disp)) <span class="sc">+</span> <span class="fu">geom_point</span>()</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>p</span></code></pre></div>
+<p><img src="figure/about.Rmd/plot-for-paper-1.png" width="960" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;output/plot-for-paper.pdf&quot;</span>, <span class="at">width =</span> <span class="dv">5</span>, <span class="at">height =</span> <span class="dv">5</span>)</span></code></pre></div>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
@@ -660,7 +701,7 @@ Start workflowr project.
 </button>
 </p>
 <div id="workflowr-sessioninfo" class="collapse">
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span></code></pre></div>
 <pre><code>R version 4.0.3 (2020-10-10)
 Platform: x86_64-w64-mingw32/x64 (64-bit)
 Running under: Windows 10 x64 (build 19042)
@@ -676,19 +717,23 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] workflowr_1.6.2
+[1] ggplot2_3.3.5   workflowr_1.6.2
 
 loaded via a namespace (and not attached):
- [1] Rcpp_1.0.7       whisker_0.4      knitr_1.36       magrittr_2.0.1  
- [5] R6_2.5.1         rlang_0.4.11     fastmap_1.1.0    fansi_0.5.0     
- [9] highr_0.9        stringr_1.4.0    tools_4.0.3      xfun_0.26       
-[13] utf8_1.2.2       git2r_0.28.0     jquerylib_0.1.4  htmltools_0.5.2 
-[17] ellipsis_0.3.2   rprojroot_2.0.2  yaml_2.2.1       digest_0.6.28   
-[21] tibble_3.1.5     lifecycle_1.0.1  crayon_1.4.2     later_1.3.0     
-[25] sass_0.4.0       vctrs_0.3.8      promises_1.2.0.1 fs_1.5.0        
-[29] glue_1.4.2       evaluate_0.14    rmarkdown_2.11   stringi_1.7.5   
-[33] bslib_0.3.1      compiler_4.0.3   pillar_1.6.4     jsonlite_1.7.2  
-[37] httpuv_1.6.3     pkgconfig_2.0.3 </code></pre>
+ [1] Rcpp_1.0.7        pillar_1.6.4      compiler_4.0.3    bslib_0.3.1      
+ [5] later_1.3.0       jquerylib_0.1.4   git2r_0.28.0      highr_0.9        
+ [9] tools_4.0.3       digest_0.6.28     gtable_0.3.0      jsonlite_1.7.2   
+[13] evaluate_0.14     lifecycle_1.0.1   tibble_3.1.5      pkgconfig_2.0.3  
+[17] rlang_0.4.11      DBI_1.1.1         yaml_2.2.1        xfun_0.26        
+[21] fastmap_1.1.0     withr_2.4.3       dplyr_1.0.7       stringr_1.4.0    
+[25] knitr_1.36        systemfonts_1.0.3 generics_0.1.1    fs_1.5.0         
+[29] vctrs_0.3.8       sass_0.4.0        tidyselect_1.1.1  rprojroot_2.0.2  
+[33] grid_4.0.3        glue_1.4.2        R6_2.5.1          textshaping_0.3.6
+[37] fansi_0.5.0       rmarkdown_2.11    farver_2.1.0      purrr_0.3.4      
+[41] magrittr_2.0.1    whisker_0.4       scales_1.1.1      promises_1.2.0.1 
+[45] ellipsis_0.3.2    htmltools_0.5.2   assertthat_0.2.1  colorspace_2.0-2 
+[49] httpuv_1.6.3      ragg_1.2.0        labeling_0.4.2    utf8_1.2.2       
+[53] stringi_1.7.5     munsell_0.5.0     crayon_1.4.2     </code></pre>
 </div>
 
 
