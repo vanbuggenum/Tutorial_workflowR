@@ -1,5 +1,5 @@
 # Tutorial_workflowR
 
-A [workflowr][] project.
+An example [workflowr][] project, generated to build tutorial at POC computational subgroupmeeting. 
 
 [workflowr]: https://github.com/jdblischak/workflowr
